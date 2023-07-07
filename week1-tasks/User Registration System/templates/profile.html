@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Management</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/profile.css')}}">
+</head>
+<body>
+  <div class="container">
+    <h1>Profile Management</h1>
+    <div id="profileOverview">
+      <h2>Profile Overview</h2>
+      <p><strong>Name:</strong> <span id="name">{{result[0] +' '+ result[1]}}</span></p>
+      <p><strong>Email:</strong> <span id="email">{{result[2]}}</span></p>
+      <p><strong>Phone:</strong> <span id="phone">{{result[3]}}</span></p>
+    </div>
+    <div class="div1">
+      <div class="updtprofile">
+        <h2>Update Profile</h2>
+      </div>
+      <div class="info">
+        {%if flag%}
+        <small>✅Changes Updated Successfully.</small>
+        {%endif%}
+      </div>
+    </div>
+    <form  class="mainform" id="profileForm" action="{{url_for('manageProfile')}}" method="POST">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <!-- <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="emailInput" name="email" required>
+      </div> -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phoneInput" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Create New Password</label>
+        <input type="password" id="passwordInput" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Confirm Password</label>
+        <input type="password" id="confirmPasswordInput" name="password" required>
+      </div>
+      <div class="footerbtn">
+        <div class="savecancel">
+          <button type="submit">Save Changes</button>
+          <button type="button" id="cancelBtn">Cancel</button>
+        </div>
+        <div class="logout">
+          <a href="{{url_for('logout')}}"><button type="button" id="logout">Logout</button></a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="{{url_for('static', filename='js/profile.js')}}"></script>
+</body>
+</html>

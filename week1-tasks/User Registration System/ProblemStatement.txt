@@ -1,0 +1,16 @@
+Task: Create a User Registration System
+
+->Description:
+    - Develop a user registration system that allows users to sign up, log in, and manage their profile.
+    - Implement functionalities such as user input validation, and storage of user data in a database
+    - password hashing for security (optional).
+
+->You are free to use any programming language, framework and database.
+->Goal to this task to check your problem solving and understanding level.
+->Note: If you are using any framework, please don't use the built-in registration system.
+
+->Create a github repo with the name "infotrixs", inside that repo create a folder week-1 tasks there you have to upload your files for the first project.
+->Also share the same on Linkedin.
+
+
+\
